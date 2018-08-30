@@ -12,16 +12,16 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 ########################################################################
 # TODO: 2.
 #   Write code that accomplishes the following:
-#     - Constructs a SimpleTurtle with a  blue  Pen.
-#     - Makes the SimpleTurtle go straight UP 200 pixels.
-#     - Tells the SimpleTurtle to make its pen go UP
+#     - Constructs a SimpleTurtle with a  blue  Pen. /
+#     - Makes the SimpleTurtle go straight UP 200 pixels. /
+#     - Tells the SimpleTurtle to make its pen go UP /
 #          (so that the next movements do NOT leave a "trail")
 #          HINT: Use the "dot trick" to figure out how to do this.
-#     - Tells the SimpleTurtle to go to (100, -40).
-#     - Tells the SimpleTurtle to make its pen go DOWN
+#     - Tells the SimpleTurtle to go to (100, -40). /
+#     - Tells the SimpleTurtle to make its pen go DOWN /
 #          (so that the next movements will return to leaving a "trail")
-#     - Makes the SimpleTurtle's pen have color "green" and thickness 10.
-#     - Tells the SimpleTurtle to go 150 pixels straight DOWN.
+#     - Makes the SimpleTurtle's pen have color "green" and thickness 10. /
+#     - Tells the SimpleTurtle to go 150 pixels straight DOWN. /
 #
 # Don't forget to:
 #     - import rosegraphics and construct a TurtleWindow
@@ -38,3 +38,37 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 #   As always, COMMIT-and-PUSH when you are done with this module.
 #
 ###############################################################################
+
+#Import
+import rosegraphics as rg
+
+#Create the window
+window = rg.TurtleWindow()
+
+#Create turtles
+tim = rg.SimpleTurtle('turtle')
+
+#Pen color
+tim.pen = rg.Pen('blue', 4)
+
+#Speed
+tim.speed = 5
+
+#Up 200 pixels
+tim.left(90)
+tim.forward(200)
+
+#Pen up
+tim.pen_up()
+
+#Go to point
+tim.go_to(rg.Point(100, -40))
+
+#Pen down
+tim.pen_down()
+
+#Change pen
+tim.pen = rg.Pen('green', 10)
+
+#Go down 150 pixels
+tim.backward(150)
