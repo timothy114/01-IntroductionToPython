@@ -191,7 +191,7 @@ tim.forward(90)
 #   You can COMMIT-and-PUSH as often as you like.  DO IT FREQUENTLY.
 #
 ###############################################################################
-
+#
 # -----------------------------------------------------------------------------
 # The next line keeps the window open until the user clicks in the window.
 # Throughout this exercise, this  close_on_mouse_click   line should be the
