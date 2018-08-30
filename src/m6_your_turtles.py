@@ -2,10 +2,10 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Timothy Li.
 """
 ###############################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ###############################################################################
 
@@ -27,3 +27,32 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 #
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 ###############################################################################
+
+#Import
+import rosegraphics as rg
+
+#Create the window
+window = rg.TurtleWindow()
+
+#Create turtles
+tim = rg.SimpleTurtle('turtle')
+bob = rg.SimpleTurtle('turtle')
+
+#Pen color
+tim.pen = rg.Pen('blue', 4)
+bob.pen = rg.Pen('blue', 1)
+
+#Speed
+tim.speed = 100
+bob.speed = 100
+
+#Drawing stuff
+for i in range(15):
+    for j in range(4):
+        tim.forward(100)
+        bob.forward(200)
+        tim.right(90)
+        bob.left(90)
+    tim.right(i * 10)
+    bob.left(i * 5)
+
